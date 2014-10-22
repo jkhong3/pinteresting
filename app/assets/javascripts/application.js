@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	slides = document.getElementsByClassName('col-sm-12');	
 	slides_total = slides.length;
 	slide_current = 0;
+
 	window.setInterval(function() {
 		changePicture(slide_current);
 		if(slide_current >= (slides_total)-1) {
@@ -38,9 +39,45 @@ document.addEventListener('DOMContentLoaded', function() {
 		else {
 			slide_current++;
 		}
-
-		console.log(slide_current);		
 	}, 3000);
 
+
+
+     	// First we get the element with class .prev, we want to add an event listener
+    	// to that element so we can perform a function every time teh element is clicked
+    	document.getElementsByClassName('prev')[0].addEventListener('click', function () {
+      	// the idea is to decrease slide_current by one, to show the previous image
+      		if(slide_current > 0){
+       	 		slide_current--;
+      		}else{
+        		// if the slide_current is less than 0 we want to move to the last image
+        		slide_current = (slides_total - 1);
+      		}
+      		// then we call the function that changes the current image we had previously coded
+      		changePicture(slide_current);
+    	});
+
+		document.getElementsByClassName('reset')[0].addEventListener('click', function () {
+			slide_current = 0;
+			changePicture(slide_current);
+		});
+
+    	document.getElementsByClassName('next')[0].addEventListener('click', function () {
+      		if(slide_current < (slides_total - 1)){
+       	 		slide_current++;
+      		}else{
+        		slide_current = 0;
+      		}
+      		changePicture(slide_current);
+    	});
+
+		changePicture(slide_current);
+		console.log(slide_current);	
+
+		document.getElementsByClassName('userinputtext')[0].addEventListener('keyup', function(e){
+			document.getElementsByClassName('bigtitle')[0].innerHTML=e.target.value;
+		});
+
 });
+
 
