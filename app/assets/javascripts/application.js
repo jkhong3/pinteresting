@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
       		}
       		changePicture(slide_current);
       		ga("send", "event", "slider", "clicknext", "click next button", 1);
+      		mixpanel.track("click next button");
     	});
 
 		changePicture(slide_current);
