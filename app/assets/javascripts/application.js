@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         		slide_current = 0;
       		}
       		changePicture(slide_current);
+      		ga("send", "event", "slider", "clicknext", "click next button", 1);
     	});
 
 		changePicture(slide_current);
