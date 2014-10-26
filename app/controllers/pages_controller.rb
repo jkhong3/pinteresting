@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def ajax
+  	render partial: 'ajax', formats: :html
+  end
 end
