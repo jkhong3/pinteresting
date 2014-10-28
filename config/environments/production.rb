@@ -80,6 +80,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'jkh-pinteresting.herokuapp.com', port: 3000 }
 end
 
+
 # config/environments/production.rb  Sets paperclip to upload images to Amazon S3
 config.paperclip_defaults = {
   :storage => :s3,
