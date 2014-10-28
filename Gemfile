@@ -12,9 +12,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'paperclip', '~> 4.0'
 
+
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
+gem 'aws-sdk', '~> 1.20.0'
 
 group :development, :test do 
 	gem 'sqlite3'
