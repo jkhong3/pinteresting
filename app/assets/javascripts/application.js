@@ -13,8 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
+//= require masonry/jquery.masonry
 
 var slides, slides_total, slide_current;
 
